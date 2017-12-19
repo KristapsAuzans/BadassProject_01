@@ -1,0 +1,7 @@
+D:\Kristaps\Codes\BadassProject_01\RCS\HelloWorld\bin\Debug\HelloWorld.exe.config
+D:\Kristaps\Codes\BadassProject_01\RCS\HelloWorld\bin\Debug\HelloWorld.exe
+D:\Kristaps\Codes\BadassProject_01\RCS\HelloWorld\bin\Debug\HelloWorld.pdb
+D:\Kristaps\Codes\BadassProject_01\RCS\HelloWorld\obj\Debug\HelloWorld.csprojResolveAssemblyReference.cache
+D:\Kristaps\Codes\BadassProject_01\RCS\HelloWorld\obj\Debug\HelloWorld.csproj.CoreCompileInputs.cache
+D:\Kristaps\Codes\BadassProject_01\RCS\HelloWorld\obj\Debug\HelloWorld.exe
+D:\Kristaps\Codes\BadassProject_01\RCS\HelloWorld\obj\Debug\HelloWorld.pdb
