@@ -13,7 +13,7 @@ namespace HelloWorld
             Console.WriteLine("Write your name?");
             string myName;
             myName = Console.ReadLine();
-            Console.WriteLine("Hello World!" + myName);
+            Console.WriteLine("Sveiciens! " + myName);
         }
     }
 }
