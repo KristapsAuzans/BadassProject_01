@@ -1,6 +1,0 @@
-D:\Kristaps\Codes\BadassProject_01\RCS\Calculator\bin\Debug\Calculator.exe.config
-D:\Kristaps\Codes\BadassProject_01\RCS\Calculator\bin\Debug\Calculator.exe
-D:\Kristaps\Codes\BadassProject_01\RCS\Calculator\bin\Debug\Calculator.pdb
-D:\Kristaps\Codes\BadassProject_01\RCS\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
-D:\Kristaps\Codes\BadassProject_01\RCS\Calculator\obj\Debug\Calculator.exe
-D:\Kristaps\Codes\BadassProject_01\RCS\Calculator\obj\Debug\Calculator.pdb
