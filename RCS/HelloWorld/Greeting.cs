@@ -15,6 +15,7 @@ namespace HelloWorld
             string myName;
             myName = Console.ReadLine();
             Console.WriteLine (HelloText + myName);
+            Console.WriteLine("Sveiciens, " + myName + "!");
         }
     }
 }
