@@ -12,7 +12,14 @@ namespace HelloWorld
         {
             Greeting greet;
             greet = new Greeting();
+            greet.HelloText = "Hello world!";
             greet.SayHello();
+
+            Greeting seaGreet;
+            seaGreet = new Greeting();
+            seaGreet.HelloText = "Ahoy world!";
+            seaGreet.SayHello();
+
             Console.ReadLine();
         }
     }
