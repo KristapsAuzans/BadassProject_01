@@ -1,0 +1,7 @@
+D:\Kristaps\Codes\BadassProject_01\RCS\wisecalculator\bin\Debug\wisecalculator.exe.config
+D:\Kristaps\Codes\BadassProject_01\RCS\wisecalculator\bin\Debug\wisecalculator.exe
+D:\Kristaps\Codes\BadassProject_01\RCS\wisecalculator\bin\Debug\wisecalculator.pdb
+D:\Kristaps\Codes\BadassProject_01\RCS\wisecalculator\obj\Debug\wisecalculator.csprojResolveAssemblyReference.cache
+D:\Kristaps\Codes\BadassProject_01\RCS\wisecalculator\obj\Debug\wisecalculator.csproj.CoreCompileInputs.cache
+D:\Kristaps\Codes\BadassProject_01\RCS\wisecalculator\obj\Debug\wisecalculator.exe
+D:\Kristaps\Codes\BadassProject_01\RCS\wisecalculator\obj\Debug\wisecalculator.pdb
