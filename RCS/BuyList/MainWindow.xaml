@@ -1,0 +1,33 @@
+﻿<Window x:Class="BuyList.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BuyList"
+        mc:Ignorable="d"
+        Title="Pirkumi" Height="506.695" Width="647.04">
+    <Window.Background>
+        <ImageBrush ImageSource="image/list.jpg" />
+
+
+
+    </Window.Background>
+    <Grid Margin="0,0,-8,-21">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="BuyListItemName" HorizontalAlignment="Left" Height="41" Margin="7,42,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="173" Grid.Column="1"/>
+        <Button x:Name="AddListButton" Click="AddListButton_Click" Content="Pievienot pirkumu" Grid.Column="1" HorizontalAlignment="Left" Margin="189,42,0,0" VerticalAlignment="Top" Width="119" Height="41"/>
+        <Label Content="Iepirkumu saraksts:" HorizontalAlignment="Left" Margin="7,138,0,0" VerticalAlignment="Top" Height="33" Width="139" Grid.Column="1"/>
+        <ScrollViewer Margin="7,176,14,135" Grid.Column="1">
+            <ItemsControl x:Name="BuyItemsListControl" Width="607"></ItemsControl>
+        </ScrollViewer>
+
+        <Label Content="Ievadi pirkumu!" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="32" Width="98"/>
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,15 @@
+D:\Kristaps\Codes\BadassProject_01\RCS\BuyList\bin\Debug\BuyList.exe.config
+D:\Kristaps\Codes\BadassProject_01\RCS\BuyList\bin\Debug\BuyList.exe
+D:\Kristaps\Codes\BadassProject_01\RCS\BuyList\bin\Debug\BuyList.pdb
+D:\Kristaps\Codes\BadassProject_01\RCS\BuyList\obj\Debug\BuyList.csprojResolveAssemblyReference.cache
+D:\Kristaps\Codes\BadassProject_01\RCS\BuyList\obj\Debug\MainWindow.g.cs
+D:\Kristaps\Codes\BadassProject_01\RCS\BuyList\obj\Debug\App.g.cs
+D:\Kristaps\Codes\BadassProject_01\RCS\BuyList\obj\Debug\BuyList_MarkupCompile.cache
+D:\Kristaps\Codes\BadassProject_01\RCS\BuyList\obj\Debug\BuyList_MarkupCompile.lref
+D:\Kristaps\Codes\BadassProject_01\RCS\BuyList\obj\Debug\MainWindow.baml
+D:\Kristaps\Codes\BadassProject_01\RCS\BuyList\obj\Debug\BuyList.g.resources
+D:\Kristaps\Codes\BadassProject_01\RCS\BuyList\obj\Debug\BuyList.Properties.Resources.resources
+D:\Kristaps\Codes\BadassProject_01\RCS\BuyList\obj\Debug\BuyList.csproj.GenerateResource.Cache
+D:\Kristaps\Codes\BadassProject_01\RCS\BuyList\obj\Debug\BuyList.csproj.CoreCompileInputs.cache
+D:\Kristaps\Codes\BadassProject_01\RCS\BuyList\obj\Debug\BuyList.exe
+D:\Kristaps\Codes\BadassProject_01\RCS\BuyList\obj\Debug\BuyList.pdb
