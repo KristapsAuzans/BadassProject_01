@@ -7,10 +7,7 @@
         mc:Ignorable="d"
         Title="Pirkumi" Height="506.695" Width="647.04">
     <Window.Background>
-        <ImageBrush ImageSource="image/list.jpg" />
-
-
-
+        <ImageBrush ImageSource="D:\Kristaps\Codes\BadassProject_01\RCS\BuyList\Images\list.jpg" />
     </Window.Background>
     <Grid Margin="0,0,-8,-21">
         <Grid.ColumnDefinitions>
@@ -19,15 +16,25 @@
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="BuyListItemName" HorizontalAlignment="Left" Height="41" Margin="7,42,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="173" Grid.Column="1"/>
-        <Button x:Name="AddListButton" Click="AddListButton_Click" Content="Pievienot pirkumu" Grid.Column="1" HorizontalAlignment="Left" Margin="189,42,0,0" VerticalAlignment="Top" Width="119" Height="41"/>
-        <Label Content="Iepirkumu saraksts:" HorizontalAlignment="Left" Margin="7,138,0,0" VerticalAlignment="Top" Height="33" Width="139" Grid.Column="1"/>
-        <ScrollViewer Margin="7,176,14,135" Grid.Column="1">
-            <ItemsControl x:Name="BuyItemsListControl" Width="607"></ItemsControl>
+        <TextBox x:Name="BuyListItemName" HorizontalAlignment="Left" Height="41" Margin="7,47,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="173" Grid.Column="1"/>
+        <Button x:Name="AddListButton" Click="AddListButton_Click" Background="AntiqueWhite" Content="Pievienot pirkumu" Grid.Column="1" HorizontalAlignment="Left" Margin="197,47,0,0" VerticalAlignment="Top" Width="119" Height="41"/>
+        <Label Content="Iepirkumu saraksts:" Background="WhiteSmoke" HorizontalAlignment="Left" Margin="7,138,0,0" VerticalAlignment="Top" Height="33" Width="139" Grid.Column="1"/>
+        <ScrollViewer Margin="7,176,395,135" Grid.Column="1">
+            <ListBox x:Name="BuyItemsListControl" Background="WhiteSmoke" Width="245" SelectionMode="Multiple">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <WrapPanel>
+                            <TextBlock FontFamily="Ariel" Text="{Binding }"/>
+                        </WrapPanel>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ListBox>
         </ScrollViewer>
 
-        <Label Content="Ievadi pirkumu!" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="32" Width="98"/>
 
-
+        <Label Content="Ievadi pirkumu!" Background="WhiteSmoke" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="32" Width="98"/>
+        <Button x:Name="SaveButton" Click="SaveButton_Click" Background="AntiqueWhite" Content="Saglabāt" Grid.Column="1" HorizontalAlignment="Left" Margin="495,355,0,0" VerticalAlignment="Top" Width="118" Height="42" RenderTransformOrigin="0.853,2.159"/>
+        <Button x:Name="ResetButton2" Click="ResetButton_Click" Background="AntiqueWhite" Content="Ielādēt" Grid.Column="1" HorizontalAlignment="Left" Margin="495,402,0,0" VerticalAlignment="Top" Width="118" Height="42" RenderTransformOrigin="0.853,2.159"/>
+        <Button x:Name="DeleteButton" Click="DeleteButton_Click" Background="AntiqueWhite" Content="Dzēst" Grid.Column="1" HorizontalAlignment="Left" Margin="133,367,0,0" VerticalAlignment="Top" Width="119" Height="41"/>
     </Grid>
 </Window>
