@@ -16,14 +16,31 @@ namespace ConsoleApp1
 
             // iegūt no ievadītā teksta visus unikālos burtus
             // izveidot mainīgo, kurā glabāsim tekstu, kas saturēs unikālos burtus
-            char[] chars = inputAsText.ToCharArray();
+            string UniqueLetters = new string(inputAsText.Distinct().ToArray());
+
+
 
             // ciklā iet cauri lietotāja ievadītajam tekstam pa vienam burtam
+            // ja šis burts neatrodas mūsu izveidotajā unikālo burtu teksta mainīgajā, tad pievienot šo burtu šim teksta mainīgajam
+            // kad viss teksts apskatīts, atgriezt rezultāta teksta mainīgo ar unikālajiem burtiem
 
-            for (int i = 1; i < chars.Length; i++)
+
+            // Man vispār vajadzīgas tālākās darbības?!?!
+
+
+
+
+
+            char[] Characters = UniqueLetters.ToCharArray();
+
+            
+
+            for (int i = 1; i < Characters.Length; i++)
             {
-                // ja šis burts neatrodas mūsu izveidotajā unikālo burtu teksta mainīgajā, tad pievienot šo burtu šim teksta mainīgajam
-                if (i
+                
+                if (inputAsText.Contains(UniqueLetters) == true);
+
+
             }
                 
 
@@ -31,8 +48,7 @@ namespace ConsoleApp1
 
             
            
-            // ja šis burts neatrodas mūsu izveidotajā unikālo burtu teksta mainīgajā, tad pievienot šo burtu šim teksta mainīgajam
-            // kad viss teksts apskatīts, atgriezt rezultāta teksta mainīgo ar unikālajiem burtiem
+            
             // nolasīt visus vārdus no faila, ierakstot tos sarakstā, kur katrs ieraksts ir viens vārds
             // iet cauri sarakstam pa vienam vārdam
             // iet cauri šobrīdējam vārdam no faila pa vienam simbolam
