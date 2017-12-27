@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 Kartupeļi
 Tomāti
 Biezpiens
+=======
+Zivis
+Zivis
+>>>>>>> 3787a0a4ca84cee377f28eab617413c2ea54224d
 Piens
