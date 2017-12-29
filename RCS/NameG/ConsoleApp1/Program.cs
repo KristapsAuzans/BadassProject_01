@@ -27,34 +27,37 @@ namespace ConsoleApp1
             // nolasīt visus vārdus no faila, ierakstot tos sarakstā, kur katrs ieraksts ir viens vārds
             string[] Lines = System.IO.File.ReadAllLines(@"Words.txt");
             // iet cauri šobrīdējam vārdam no faila pa vienam simbolam
-            var Lines = Lines.ToCharArray();
-            
-            
+
+            bool LetterFound = true;
             foreach (string line in Lines)
 
             {
-                foreach (var LineLetters in line)
+                foreach (char LineLetters in line)
                 {
 
+                    // pārbaudīt, vai šis simbols atrodas mūsu unikālo burtu tekstā
+                    if (UniqueLetters.Contains(LineLetters) == false)
+                    {
+                        // ja simbols neatrodas starp unikālajiem simboliem, tad pārstāt iet cauri šim vārdam pa simboliem
+                        continue;
+
+                    }
+
+                    else
+                    {
+                       
+                    }
+
+                    Console.WriteLine(Line);
+
+
                 }
-
+                
+                
+      
             }
 
-
-
-            
-
-            char[] Letter = UniqueLetters.ToCharArray();
-
-          
-            foreach (char counter in UniqueLetters)
-
-            {
-        
-             
-            }
-
-
+                    
                 Console.ReadLine();
 
             
@@ -63,11 +66,7 @@ namespace ConsoleApp1
            
 
           
-            // pārbaudīt, vai šis simbols atrodas mūsu unikālo burtu tekstā
-            // ja simbols neatrodas starp unikālajiem simboliem, tad pārstāt iet cauri šim vārdam pa simboliem
-            // iet cauri unikālajiem simboliem pa vienam simbolam
-            // pārbaudīt, vai šis simbols atrodas mūsu vārda no faila tekstā
-            // ja simbols neatrodas vārdā no faila, tad pārstāt iet cauri šim vārdam
+            
             // ja visi simboli no vārda atrodas unikālo simbolu virknē un visi unikālie simboli atrodas vārdā, izvadīt to uz ekrāna
 
 
