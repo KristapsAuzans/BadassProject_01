@@ -19,39 +19,50 @@ namespace ConsoleApp1
             string UniqueLetters = new string(inputAsText.Distinct().ToArray());
 
 
-
             // ciklā iet cauri lietotāja ievadītajam tekstam pa vienam burtam
             // ja šis burts neatrodas mūsu izveidotajā unikālo burtu teksta mainīgajā, tad pievienot šo burtu šim teksta mainīgajam
             // kad viss teksts apskatīts, atgriezt rezultāta teksta mainīgo ar unikālajiem burtiem
 
+            
+            // nolasīt visus vārdus no faila, ierakstot tos sarakstā, kur katrs ieraksts ir viens vārds
+            string[] Lines = System.IO.File.ReadAllLines(@"Words.txt");
+            // iet cauri šobrīdējam vārdam no faila pa vienam simbolam
+            var Lines = Lines.ToCharArray();
+            
+            
+            foreach (string line in Lines)
 
-            // Man vispār vajadzīgas tālākās darbības?!?!
+            {
+                foreach (var LineLetters in line)
+                {
+
+                }
+
+            }
 
 
-
-
-
-            char[] Characters = UniqueLetters.ToCharArray();
 
             
 
-            for (int i = 1; i < Characters.Length; i++)
+            char[] Letter = UniqueLetters.ToCharArray();
+
+          
+            foreach (char counter in UniqueLetters)
+
             {
-                
-                if (inputAsText.Contains(UniqueLetters) == true);
-
-
+        
+             
             }
-                
+
 
                 Console.ReadLine();
 
             
            
             
-            // nolasīt visus vārdus no faila, ierakstot tos sarakstā, kur katrs ieraksts ir viens vārds
-            // iet cauri sarakstam pa vienam vārdam
-            // iet cauri šobrīdējam vārdam no faila pa vienam simbolam
+           
+
+          
             // pārbaudīt, vai šis simbols atrodas mūsu unikālo burtu tekstā
             // ja simbols neatrodas starp unikālajiem simboliem, tad pārstāt iet cauri šim vārdam pa simboliem
             // iet cauri unikālajiem simboliem pa vienam simbolam
