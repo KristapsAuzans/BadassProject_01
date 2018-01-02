@@ -39,16 +39,22 @@ namespace ConsoleApp1
                     if (UniqueLetters.Contains(LineLetters) == false)
                     {
                         // ja simbols neatrodas starp unikālajiem simboliem, tad pārstāt iet cauri šim vārdam pa simboliem
+                        LetterFound = false;
                         continue;
 
                     }
 
                     else
                     {
-                       
+                        LetterFound = true;
+                    
                     }
 
-                    Console.WriteLine(Line);
+                    if (LetterFound == true)
+                    {
+                        Console.WriteLine(line);
+                    }
+                    
 
 
                 }
