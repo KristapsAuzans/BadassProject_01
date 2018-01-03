@@ -27,11 +27,12 @@ namespace ConsoleApp1
             // nolasīt visus vārdus no faila, ierakstot tos sarakstā, kur katrs ieraksts ir viens vārds
             string[] Lines = System.IO.File.ReadAllLines(@"Words.txt");
             // iet cauri šobrīdējam vārdam no faila pa vienam simbolam
-
-            bool LetterFound = true;
+           
             foreach (string line in Lines)
 
             {
+                bool LetterFound = true;
+
                 foreach (char LineLetters in line)
                 {
 
@@ -40,31 +41,24 @@ namespace ConsoleApp1
                     {
                         // ja simbols neatrodas starp unikālajiem simboliem, tad pārstāt iet cauri šim vārdam pa simboliem
                         LetterFound = false;
-                        continue;
+                        break;
 
                     }
 
-                    else
-                    {
-                        LetterFound = true;
+                                
                     
-                    }
-
-                    if (LetterFound == true)
-                    {
-                        Console.WriteLine(line);
-                    }
-                    
-
-
                 }
-                
-                
-      
+
+                if (LetterFound == true)
+                {
+                    Console.WriteLine(line);
+                }
+
+
             }
 
-                    
-                Console.ReadLine();
+
+            Console.ReadLine();
 
             
            
