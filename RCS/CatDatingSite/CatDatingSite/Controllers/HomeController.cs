@@ -7,6 +7,7 @@ using System.Web.Mvc;
 namespace CatDatingSite.Controllers
 {
     using CatDatingSite.Models;
+    using System.Net;
 
     public class HomeController : Controller
     {
@@ -38,13 +39,24 @@ namespace CatDatingSite.Controllers
                 var catListFromDb = catDb.CatProfiles.ToList();
                 return View(catListFromDb);
             }
-            
-
-            
-
-            
+                              
         }
-                 
+
+        public ActionResult DeleteCat(int deletableCatId)
+        {
+            using (var catDb = new CatDb())
+            {
+
+                var deletableCat =  catDb.CatProfiles.First(CatProfile => CatProfile.CatID == deletableCatId);
+                catDb.CatProfiles.Remove(deletableCat);
+                
+
+                catDb.SaveChanges();
+            }
+
+            return RedirectToAction("Index");
+
+        }
 
         public ActionResult About()
         {

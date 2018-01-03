@@ -9,6 +9,7 @@
     {
         <div class="row">
             <div class="col-md-12">
+                @Html.ActionLink("Nodzēst kaķi", "DeleteCat", "Home", new { deletableCatId = cat.CatID }, null)
                 <h2>Cat name: @cat.CatName</h2>
                 <p>Cat age: @cat.CatAge</p>
                 <img src="@cat.CatImage" />
