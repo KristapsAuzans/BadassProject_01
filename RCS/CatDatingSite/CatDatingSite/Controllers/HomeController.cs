@@ -30,10 +30,10 @@ namespace CatDatingSite.Controllers
            
             using (var catDb = new CatDb())
             {
-                catDb.CatProfiles.Add(catFromDb);
-                catDb.CatProfiles.Add(anothercatFromDb);
+                //catDb.CatProfiles.Add(catFromDb);
+                //catDb.CatProfiles.Add(anothercatFromDb);
 
-                catDb.SaveChanges();
+                //catDb.SaveChanges();
 
                 var catListFromDb = catDb.CatProfiles.ToList();
                 return View(catListFromDb);
