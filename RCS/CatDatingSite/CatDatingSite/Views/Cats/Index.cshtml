@@ -4,19 +4,21 @@
     ViewBag.Title = "Home Page";
 }
 
+@Html.ActionLink("pievienot jaunu kaķi", "AddCat", "Cats")
+
 
     @foreach (var cat in Model)
     {
+        @Html.ActionLink("rediģēt kaķi", "EditCat", "Cats", new { editableCatId = cat.CatID }, null)
         <div class="row">
             <div class="col-md-12">
-                @Html.ActionLink("Nodzēst kaķi", "DeleteCat", "Home", new { deletableCatId = cat.CatID }, null)
+                @Html.ActionLink("Nodzēst kaķi", "DeleteCat", "Cats", new { deletableCatId = cat.CatID }, null)
                 <h2>Cat name: @cat.CatName</h2>
                 <p>Cat age: @cat.CatAge</p>
                 <img src="@cat.CatImage" />
-                <p>
-                    Esi sveicināts kaķu iepazīšanās portālā, lai apskatītu kaķus spied uz linka.
-                </p>
-                <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+                <p>@cat.CatDescription</p>
+               
+               
             </div>
         </div>
     }

@@ -7,31 +7,60 @@ using System.Web.Mvc;
 namespace CatDatingSite.Controllers
 {
     using CatDatingSite.Models;
+    using System.Data.Entity.Migrations;
     public class CatsController : Controller
     {
         // GET: Cats
         public ActionResult Index()
         {
-
-            var catFromDb = new CatProfile();
-            catFromDb.CatName = "Leo";
-            catFromDb.CatAge = 4;
-            catFromDb.CatImage = "https://cdn.pixabay.com/photo/2017/11/09/21/41/shotlanskogo-2934720__340.jpg";
-
-            var anothercatFromDb = new CatProfile();
-            anothercatFromDb.CatName = "Keira";
-            anothercatFromDb.CatAge = 6;
-            anothercatFromDb.CatImage = "https://cdn.pixabay.com/photo/2017/12/26/12/18/cat-3040345__340.jpg";
-
             using (var catDb = new CatDb())
             {
-                //catDb.CatProfiles.Add(catFromDb);
-                //catDb.CatProfiles.Add(anothercatFromDb);
-
-                //catDb.SaveChanges();
-
                 var catListFromDb = catDb.CatProfiles.ToList();
                 return View(catListFromDb);
+            }
+        }
+
+        public ActionResult AddCat()
+        {
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddCat(CatProfile userCreatedCat)
+        {
+            if(ModelState.IsValid == false)
+            {
+                return RedirectToAction("Index");
+            }
+            using (var catDb = new CatDb())
+            {
+                catDb.CatProfiles.Add(userCreatedCat);
+                catDb.SaveChanges();
+            }
+
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public ActionResult EditCat(CatProfile catProfile)
+        {
+            using (var catDb = new CatDb())
+            {
+                
+                catDb.Entry(catProfile).CurrentValues.SetValues(catProfile);
+                catDb.SaveChanges();
+            }
+
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult EditCat (int editableCatId)
+        {
+            using (var catDb = new CatDb())
+            {
+                var editableCat = catDb.CatProfiles.First(catProfile => catProfile.CatID == editableCatId);
+                return View("EditCat", editableCat);
             }
         }
 
