@@ -5,23 +5,18 @@
 }
 
 
-    @foreach (var cat in Model)
-    {
+   
+    
         <div class="row">
             <div class="col-md-12">
-                @Html.ActionLink("Nodzēst kaķi", "DeleteCat", "Home", new { deletableCatId = cat.CatID }, null)
-                <h2>Cat name: @cat.CatName</h2>
-                <p>Cat age: @cat.CatAge</p>
-                <img src="@cat.CatImage" />
-                <p>
-                    ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                    enables a clean separation of concerns and gives you full control over markup
-                    for enjoyable, agile development.
-                </p>
-                <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+           
+                <h2>
+                    Esi sveicināts kaķu iepazīšanās portālā, lai apskatītu kaķus spied uz linka.
+                </h2>
+               
             </div>
         </div>
-    }
+    
 
 
 
