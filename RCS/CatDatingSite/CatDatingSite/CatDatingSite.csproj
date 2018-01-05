@@ -208,12 +208,21 @@
     <Compile Include="Migrations\201801041837025_added new field.Designer.cs">
       <DependentUpon>201801041837025_added new field.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801051834209_Added files2.cs" />
+    <Compile Include="Migrations\201801051834209_Added files2.Designer.cs">
+      <DependentUpon>201801051834209_Added files2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801051854136_without typo.cs" />
+    <Compile Include="Migrations\201801051854136_without typo.Designer.cs">
+      <DependentUpon>201801051854136_without typo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CatDb.cs" />
     <Compile Include="Models\CatProfile.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\UploadedFiles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -303,6 +312,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801041837025_added new field.resx">
       <DependentUpon>201801041837025_added new field.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801051834209_Added files2.resx">
+      <DependentUpon>201801051834209_Added files2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801051854136_without typo.resx">
+      <DependentUpon>201801051854136_without typo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

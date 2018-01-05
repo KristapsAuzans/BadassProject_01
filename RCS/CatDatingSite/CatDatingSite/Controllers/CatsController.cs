@@ -7,7 +7,10 @@ using System.Web.Mvc;
 namespace CatDatingSite.Controllers
 {
     using CatDatingSite.Models;
-    using System.Data.Entity.Migrations;
+    using System.Data.Entity;
+    using System.IO;
+    using static CatDatingSite.Models.UploadedFiles;
+
     public class CatsController : Controller
     {
         // GET: Cats
@@ -31,7 +34,7 @@ namespace CatDatingSite.Controllers
         {
             if(ModelState.IsValid == false)
             {
-                return RedirectToAction("Index");
+                return View(userCreatedCat);
             }
             using (var catDb = new CatDb())
             {
@@ -43,12 +46,30 @@ namespace CatDatingSite.Controllers
         }
 
         [HttpPost]
-        public ActionResult EditCat(CatProfile catProfile)
+        public ActionResult EditCat(CatProfile catProfile, HttpPostedFileBase uploadedPicture)
         {
+            if (ModelState.IsValid == false)
+            {
+                return View(catProfile);
+            }
             using (var catDb = new CatDb())
             {
-                
-                catDb.Entry(catProfile).CurrentValues.SetValues(catProfile);
+                var profilePic = new UploadedFiles.File();
+                profilePic.FileName = Path.GetFileName(uploadedPicture.FileName);
+                profilePic.ContentType = uploadedPicture.ContentType;
+
+                profilePic.CatProfileIe = catProfile.CatID;
+                profilePic.CatProfile = catProfile;
+
+                using (var reader = new BinaryReader(uploadedPicture.InputStream))
+                {
+                    profilePic.Content = reader.ReadBytes(uploadedPicture.ContentLength);
+                }
+
+                catDb.Files.Add(profilePic);
+
+                catProfile.profilePicture = profilePic;
+                catDb.Entry(catProfile).State = System.Data.Entity.EntityState.Modified;
                 catDb.SaveChanges();
             }
 
