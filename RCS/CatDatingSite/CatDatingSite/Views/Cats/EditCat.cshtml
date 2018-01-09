@@ -26,13 +26,18 @@
             </div>
         </div>
 
+
+@if (Model.profilePicture != null)
+{ 
         <div class="form-group">
-            @Html.LabelFor(model => model.CatImage, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("Šobrīdējā profila bilde", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(Model => Model.CatImage, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CatImage, "", new { @class = "text-danger" })
-            </div>
+                              
+                    <img src="~/Cats/GetCatProfilePicture?catProfilePictureIe=@Model.profilePicture.CatProfileIe" class="img-responsive" />
+                
+              </div>
         </div>
+}
 
         <div class="form-group">
             @Html.LabelFor(model => model.CatDescription, htmlAttributes: new { @class = "control-label col-md-2" })

@@ -1,0 +1,34 @@
+﻿@model List<CatDatingSite.Models.Blog>
+
+@{
+    ViewBag.Title = "Forums";
+}
+
+<h2>Forums</h2>
+
+<div class="container">
+    <div class="row">
+        @Html.ActionLink("Pievieno ierakstu", "AddBlog", null, htmlAttributes: new { @class = "btn btn-info", role = "button" })
+    </div>
+ </div>
+
+
+        @foreach (var item in Model)
+        {
+            <div class="row">
+                <div class="col-md-12">
+
+                    <h2 align="center">
+                    <font size="15"> @item.Title</font></h2>
+                    <p align="center"> <font size="6">@item.Text </font></p>
+                    <p align="right"> <font size="3"> Autors: @item.Email </font></p>
+                    <p align="right"> <font size="3"> Pievienots: @item.BlogCreated </font></p>
+                    <p align="right"> <font size="3"> Rediģēts: @item.BlogModified </font></p>
+
+                    <p align="right">
+                    @Html.ActionLink("Labot", "EditBlog", new { editBlog = item.BlogID }, htmlAttributes: new { @class = "btn btn-info", role = "button" })
+                    @Html.ActionLink("Dzēst", "DeleteBlog", new { deleteBlog = item.BlogID }, htmlAttributes: new { @class = "btn btn-info", role = "button" }) </p>
+
+                </div>
+            </div>
+        }

@@ -3,21 +3,31 @@
 @{
     ViewBag.Title = "Home Page";
 }
-
-@Html.ActionLink("pievienot jaunu kaķi", "AddCat", "Cats")
+<div class="container">
+    <div class="row">      
+        @Html.ActionLink("pievienot jaunu kaķi", "AddCat", "Cats", htmlAttributes: new { @class = "btn btn-info", role = "button" })
+    </div>
+</div>
 
 
     @foreach (var cat in Model)
     {
-        @Html.ActionLink("rediģēt kaķi", "EditCat", "Cats", new { editableCatId = cat.CatID }, null)
+        
+       
         <div class="row">
             <div class="col-md-12">
-                @Html.ActionLink("Nodzēst kaķi", "DeleteCat", "Cats", new { deletableCatId = cat.CatID }, null)
+                
                 <h2>Cat name: @cat.CatName</h2>
                 <p>Cat age: @cat.CatAge</p>
-                <img src="@cat.CatImage" />
+
+                @if (cat.profilePicture != null)
+                {
+                <img src="~/Cats/GetCatProfilePicture?catProfilePictureId=@cat.profilePicture.CatProfileIe" class="img-responsive" />
+                }
                 <p>@cat.CatDescription</p>
-               
+                @Html.ActionLink("Rediģēt kaķi", "EditCat", "Cats", new { editableCatId = cat.CatID }, htmlAttributes: new { @class = "btn btn-info", role = "button" })
+                @Html.ActionLink("Nodzēst kaķi", "DeleteCat", "Cats", new { deletableCatId = cat.CatID }, htmlAttributes: new { @class = "btn btn-info", role = "button" })
+
                
             </div>
         </div>

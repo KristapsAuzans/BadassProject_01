@@ -190,6 +190,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\CatsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -216,8 +217,17 @@
     <Compile Include="Migrations\201801051854136_without typo.Designer.cs">
       <DependentUpon>201801051854136_without typo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801081732337_Blogs.cs" />
+    <Compile Include="Migrations\201801081732337_Blogs.Designer.cs">
+      <DependentUpon>201801081732337_Blogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801082156367_string dates.cs" />
+    <Compile Include="Migrations\201801082156367_string dates.Designer.cs">
+      <DependentUpon>201801082156367_string dates.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Blog.cs" />
     <Compile Include="Models\CatDb.cs" />
     <Compile Include="Models\CatProfile.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -286,6 +296,9 @@
     <Content Include="Views\Cats\Index.cshtml" />
     <Content Include="Views\Cats\AddCat.cshtml" />
     <Content Include="Views\Cats\EditCat.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\Blog\AddBlog.cshtml" />
+    <Content Include="Views\Blog\EditBlog.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -318,6 +331,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801051854136_without typo.resx">
       <DependentUpon>201801051854136_without typo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801081732337_Blogs.resx">
+      <DependentUpon>201801081732337_Blogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801082156367_string dates.resx">
+      <DependentUpon>201801082156367_string dates.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
